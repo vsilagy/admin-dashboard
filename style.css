@@ -10,17 +10,38 @@
   --text-primary: #000000;
 }
 
-/* header */
-.header-top .avatar {
-  height: 2rem;
-}
-.header-bottom .avatar {
-  height: 4rem;
+body {
+  height: 100vh;
+  width: 100vh;
+  display: grid;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main main";
+  grid-template-columns: 250px 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
 }
 
-/* sidebar */
+.header {
+  grid-area: header;
+}
+
 .sidebar {
+  grid-area: sidebar;
   background-color: var(--teal);
 }
+.main {
+  grid-area: main;
+}
 
-/* main section */
+/* header */
+.header-top .avatar {
+  width: 2rem;
+}
+.header-bottom .avatar {
+  width: 5rem;
+}
+
+/* aside */
+.aside-profile img {
+  height: 5rem;
+}
