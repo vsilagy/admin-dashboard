@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --teal: #0ea5e9;
+  --orange: #FFB200;
+  --grey: #CFD2CF;
+  --bg-color: #FFFFFF;
+  --text-primary: #000000;
+}
+
+/* header */
+.header-top .avatar {
+  height: 2rem;
+}
+.header-bottom .avatar {
+  height: 4rem;
+}
+
+/* sidebar */
+.sidebar {
+  background-color: var(--teal);
+}
+
+/* main section */
