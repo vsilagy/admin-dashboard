@@ -191,7 +191,7 @@ body {
 .main h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  padding: .5rem 0;
+  padding: .6rem 0;
 }
 
 .projects {
@@ -202,18 +202,42 @@ body {
   width: 1.5rem;
 }
 
-/* aside */
+/* aside  announcements section*/
 .aside-top {
   grid-area: announcements;
 }
 
+.aside-article {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: .8rem .4rem;
+  margin: 0 .5rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+.aside-article:last-child {
+  border: none;
+}
+
+.aside-title {
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.aside-text {
+  font-size: .7rem;
+  opacity: .6;
+}
+
+/* aside trending section */
 .aside-bottom {
   grid-area: trending;
 }
 
 .aside-card {
   background-color: var(--white);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 1rem;
   box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.35);
 }
