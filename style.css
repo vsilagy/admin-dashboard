@@ -7,7 +7,7 @@
   --teal: #0ea5e9;
   --orange: #FFB200;
   --grey: #e2e8f0;
-  --bg-color: #FFFFFF;
+  --white: #FFFFFF;
   --text-primary: #000000;
 }
 
@@ -18,6 +18,7 @@ body {
   grid-template-areas: 
     "sidebar header header"
     "sidebar main main";
+  overflow: hidden;
 }
 
 /* sidebar section */
@@ -31,11 +32,11 @@ body {
 
 .dashboard,
 .menu li {
-  color: var(--bg-color);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* gap: 1rem; */
+  gap: 1rem;
 }
 
 .dashboard img {
@@ -43,18 +44,16 @@ body {
 }
 
 .dashboard h1 {
-  padding-left: .4em;
   font-size: 1.25rem;
 }
 
 .menu li > img {
-  width: 1rem;
+  width: 1.25rem;
   padding: .5rem;
 }
 
 .menu li > p {
   font-size: 1rem;
-  padding-left: .7rem;
 }
 
 .menu-top {
@@ -67,19 +66,19 @@ body {
   grid-area: header;
   display: grid;
   grid-template-rows: .8fr 1.5fr;
-  background-color: var(--bg-color);
-  padding-bottom: .5rem;
-  border-bottom: grey solid 1px;
+  background-color: var(--white);
+  padding-bottom: 1rem;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 0;
+  padding: .5rem 1rem .5rem;
 }
 
 .header-top .icon {
-  width: 1.1rem;
+  width: 1.2rem;
+  padding-right: .3rem;
 }
 
 .search-wrapper {
@@ -95,7 +94,7 @@ body {
   background-color: var(--grey);
   border-radius: 10px;
   border: none;
-  height: 1.2rem;
+  height: 1.4rem;
 }
 
 .user-wrapper {
@@ -112,14 +111,14 @@ body {
 }
 
 .user-wrapper .user-name {
-  font-size: .7rem;
+  font-size: .9rem;
   font-weight: 700;
 }
 
 .header-bottom {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 0;
+  padding: .5rem 1rem .5rem;
 }
 
 .welcome-wrapper {
@@ -145,11 +144,11 @@ body {
 }
 
 .greeting-wrapper .user-name-id {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .greeting-wrapper .greeting {
-  font-size: .7rem;
+  font-size: .8rem;
 }
 
 .buttons {
@@ -160,7 +159,7 @@ body {
 }
 
 .buttons button {
-  color: var(--bg-color);
+  color: var(--white);
   background-color: var(--teal);
   font-size: 1rem;
   font-weight: 700;
@@ -177,6 +176,26 @@ body {
 /* main section */
 .main {
   grid-area: main;
+  background-color: var(--grey);
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-columns: 4fr 1.5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+   "projects announcements"
+   "projects trending";
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.main h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: .5rem 0;
+}
+
+.projects {
+  grid-area: projects;
 }
 
 .card-icons img {
@@ -184,7 +203,44 @@ body {
 }
 
 /* aside */
+.aside-top {
+  grid-area: announcements;
+}
+
+.aside-bottom {
+  grid-area: trending;
+}
+
+.aside-card {
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.35);
+}
+
+.aside-profile {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 0;
+}
+
+.aside-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .4rem;
+  font-size: .7rem;
+  padding-right: 2rem;
+}
+
 .aside-profile img {
-  height: 5rem;
+  height: 2.5rem;
   border-radius: 50%;
+  margin-right: .5rem;
+}
+
+.aside-user {
+  opacity: .6;
 }
