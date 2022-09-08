@@ -27,7 +27,7 @@ body {
   background-color: var(--teal);
   font-weight: 500;
   padding: 1rem;
-  width: 200px;
+  min-width: 220px;
 }
 
 .dashboard,
@@ -36,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: .8rem;
 }
 
 .dashboard img {
@@ -67,13 +67,12 @@ body {
   display: grid;
   grid-template-rows: .8fr 1.5fr;
   background-color: var(--white);
-  padding-bottom: 1rem;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 1rem .5rem;
+  padding: .5rem;
 }
 
 .header-top .icon {
@@ -90,11 +89,11 @@ body {
 }
 
 .search-wrapper input {
-  width: 500px;
+  width: 450px;
   background-color: var(--grey);
   border-radius: 10px;
   border: none;
-  height: 1.4rem;
+  height: 1.5rem;
 }
 
 .user-wrapper {
@@ -102,7 +101,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-right: 2.5rem;
-  gap: 1.1rem;
+  gap: 1.5rem;
 }
 
 .user-wrapper .avatar {
@@ -118,7 +117,7 @@ body {
 .header-bottom {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 1rem .5rem;
+  padding: .5rem;
 }
 
 .welcome-wrapper {
@@ -161,13 +160,13 @@ body {
 .buttons button {
   color: var(--white);
   background-color: var(--teal);
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 700;
   text-align: center;
   border-radius: 1.5rem;
   border: none;
   padding: .6rem 1.2rem;
-  width: 6rem;
+  width: 5rem;
   cursor: pointer;
 }
 
@@ -177,19 +176,20 @@ body {
 .main {
   grid-area: main;
   background-color: var(--grey);
-  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px 4px 8px -4px grey;
   display: grid;
-  grid-template-columns: 4fr 1.5fr;
+  grid-template-columns: 5fr 2.25fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
    "projects announcements"
    "projects trending";
-  gap: 1rem;
-  padding: 1.5rem;
+   justify-items: start;
+  justify-content: space-evenly;
+  padding: 1rem 1.5rem 1rem 1rem;
 }
 
 .main h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   padding: .6rem 0;
 }
@@ -198,13 +198,60 @@ body {
   grid-area: projects;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+  border-left: .5rem solid var(--orange);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: .5rem;
+}
+
+.card-text {
+  font-size: .8rem;
+  color: grey;
+  padding: .5rem 0;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: .6rem;
+  margin-top: auto;
+}
+
 .card-icons img {
-  width: 1.5rem;
+  width: 1.25rem;
 }
 
 /* aside  announcements section*/
 .aside-top {
   grid-area: announcements;
+  padding-left: 1rem;
+}
+
+.aside-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  min-width: 225px;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
 }
 
 .aside-article {
@@ -212,7 +259,6 @@ body {
   flex-direction: column;
   gap: .3rem;
   padding: .8rem .4rem;
-  margin: 0 .5rem;
   border-bottom: 1px solid var(--grey);
 }
 
@@ -221,31 +267,25 @@ body {
 }
 
 .aside-title {
-  font-size: .7rem;
+  font-size: .8rem;
   font-weight: 700;
 }
 
 .aside-text {
   font-size: .7rem;
-  opacity: .6;
+  color: grey;
 }
 
 /* aside trending section */
 .aside-bottom {
   grid-area: trending;
-}
-
-.aside-card {
-  background-color: var(--white);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.35);
+  padding-left: 1rem;
 }
 
 .aside-profile {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
   padding: .5rem 0;
 }
 
@@ -254,17 +294,16 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: .4rem;
   font-size: .7rem;
   padding-right: 2rem;
 }
 
 .aside-profile img {
-  height: 2.5rem;
+  height: 2.25rem;
   border-radius: 50%;
-  margin-right: .5rem;
+  margin-left: .8rem;
 }
 
 .aside-user {
-  opacity: .6;
+  color: grey;
 }
