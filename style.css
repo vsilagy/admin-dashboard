@@ -15,6 +15,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
+  grid-template-rows: 1fr 8fr;
   grid-template-areas: 
     "sidebar header header"
     "sidebar main main";
@@ -78,7 +79,7 @@ body {
 .header-top {
   display: flex;
   justify-content: space-between;
-  padding: 1rem .5rem .5rem;
+  padding: .5rem;
 }
 
 .header-top .icon {
@@ -123,7 +124,7 @@ body {
 .header-bottom {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 0;
+  padding: .5rem 0 1rem;
 }
 
 .welcome-wrapper {
@@ -179,17 +180,17 @@ body {
 /* main section */
 .main {
   grid-area: main;
-  background-color: var(--grey);
-  box-shadow: inset 0px 4px 8px -4px grey;
   display: grid;
-  grid-template-columns: 6fr minmax(250px, 2fr);
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 3fr 3fr minmax(250px, 2fr);
+  grid-template-rows: auto 1fr;
   grid-template-areas: 
-   "projects announcements"
-   "projects trending";
+   "projects projects announcements"
+   "projects projects trending";
    justify-items: start;
   justify-content: space-evenly;
   padding: 1rem 1.5rem 1rem 1rem;
+  background-color: var(--grey);
+  box-shadow: inset 0px 4px 8px -4px grey;
 }
 
 .main h3 {
