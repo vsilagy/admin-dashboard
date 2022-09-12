@@ -15,7 +15,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 9fr;
   grid-template-areas: 
     "sidebar header header"
     "sidebar main main";
@@ -28,7 +28,7 @@ body {
   background-color: var(--teal);
   font-weight: 500;
   padding: 1rem;
-  min-width: 250px;
+  min-width: 240px;
 }
 
 .dashboard,
@@ -72,7 +72,7 @@ body {
 .header {
   grid-area: header;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1.5fr 2fr;
   background-color: var(--white);
   margin-right: 1rem;
 }
@@ -80,11 +80,10 @@ body {
 .header-top {
   display: flex;
   justify-content: space-between;
-  padding: .5rem;
 }
 
 .header-top .icon {
-  width: 1.5rem;
+  height: 22px;
   padding-right: .3rem;
 }
 
@@ -97,11 +96,11 @@ body {
 }
 
 .search-wrapper input {
-  width: 600px;
+  width: 550px;
   background-color: var(--grey);
-  border-radius: 10px;
+  border-radius: 16px;
   border: none;
-  height: 1.6rem;
+  height: 28px;
 }
 
 .user-wrapper {
@@ -172,10 +171,10 @@ body {
   font-size: .9rem;
   font-weight: 700;
   text-align: center;
-  border-radius: 2rem;
+  border-radius: 20px;
   border: none;
   padding: .7rem 1.5rem;
-  width: 6rem;
+  width: 95px;
   cursor: pointer;
 }
 
@@ -183,8 +182,8 @@ body {
 .main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 3fr 3fr minmax(250px, 2fr);
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 4fr 4fr 3fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
    "projects projects announcements"
    "projects projects trending";
@@ -224,13 +223,13 @@ body {
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  padding-top: .5rem;
+  padding-top: 1rem;
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: .9rem;
   color: grey;
   padding: .5rem 0;
 }
@@ -239,7 +238,7 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
-  padding: .6rem;
+  padding: .7rem;
   margin-top: auto;
 }
 
@@ -258,16 +257,15 @@ body {
 
 .aside-top {
   grid-area: announcements;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .aside-card {
   background-color: var(--white);
   border-radius: 8px;
-  padding: 1.25rem;
-  margin-right: 1rem;
+  padding: 1.4rem;
   height: 250px;
-  width: 200px;
+  width: 220px;
   box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
 
@@ -275,7 +273,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: .3rem;
-  padding: .8rem .4rem;
+  padding: 1rem .5rem;
   border-bottom: 1px solid var(--grey);
 }
 
@@ -284,7 +282,7 @@ body {
 }
 
 .aside-title {
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 700;
 }
 
