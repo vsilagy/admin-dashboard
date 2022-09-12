@@ -6,7 +6,12 @@
 
 ### Objectives:
 
-- build a full dashboard design following the design
+- build a admin dashboard mockup following the assignment design
+
+##### Assignment Design
 
 ![dashboard-project](/assets/dashboard-project.png)
+
+##### My Version
+
 ![screenshot](/assets/screenshot.png)
