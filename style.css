@@ -176,6 +176,7 @@ body {
   text-align: center;
   border-radius: 20px;
   border: none;
+  width: 6.25em;
   padding: .625em 1.5em;
   cursor: pointer;
 }
@@ -266,7 +267,7 @@ body {
   background-color: var(--white);
   border-radius: 8px;
   height: 260px;
-  width: 220px;
+  width: 230px;
   padding: 1.25em;
   box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
